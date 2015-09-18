@@ -32,6 +32,9 @@ describe('student', function(){		//for whole student module
 				if(err) throw err;
 				res.should.have.status(200);
 				res.body.should.be.an.instanceOf(Object);
+				res.body.should.have.property('studNo','2015-67890').and.has.own.property('2015-67890');
+				res.body.should.have.property('name','Yay');
+				res.body.should.have.property('bdate','2015-09-11');
 				done();
 			});
 		});
